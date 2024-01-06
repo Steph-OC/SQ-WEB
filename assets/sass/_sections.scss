@@ -1,0 +1,41 @@
+section {
+    height: 500px;
+    background-color: #fff;
+}
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 70px 100px 0;
+    background-color:#618ce878;
+}
+
+.text-presentation {
+    flex-basis: 40%;
+    padding: 20px 0 0 50px;
+}
+
+.img-presentation {
+    flex-basis: 50%;
+    height: 400px;
+    background-image: url('assets/images/banniere.webp');
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-presentation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid white; /* Crée un cadre semblable à un trou */
+    box-sizing: border-box;
+    
+}

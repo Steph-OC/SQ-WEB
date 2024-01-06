@@ -1,0 +1,14 @@
+h1 {
+    color: #fff;
+    font-size: 5em;
+    text-align: center;
+
+    .letter {
+        display: inline-block;
+        opacity: 0;
+    }
+
+    .block-space {
+        display: inline-block;
+    }
+}

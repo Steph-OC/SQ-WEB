@@ -1,0 +1,85 @@
+.site_header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .container-logoNav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+        background-color: #EF883A;
+    }
+
+    .site_nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        .site_header_menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            list-style-type: none;
+            gap: 10%;
+            margin-bottom: 0px;
+
+            & a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: black;
+            }
+    }
+}
+
+    .site_nav.vertical {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 140px;
+        height: 28%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: #EF883A;
+        z-index: 1000;
+        border-radius: 10px 0px 0px 10px;
+        box-shadow: 3px 3px 5px 0px #0000004d;
+        padding: 5px 0px 10px 0px;
+        /* Ombre */
+
+        .site_header_menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            list-style-type: none;
+            gap: 2%;
+
+            & a {
+                display: block;
+                padding: 5px;
+                text-decoration: none;
+                color: black;
+
+            }
+
+        }
+
+    }
+
+    .banner {
+        width: 100%;
+        height: 600px;
+        background-image: url('assets/images/bureau.png');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+}

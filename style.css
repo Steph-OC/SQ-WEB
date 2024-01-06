@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: SQ-WEB
 Author: Stephanie Quibel
@@ -6,4 +7,209 @@ Version: 1.0
 */
 body {
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.site_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.site_header .container-logoNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background-color: #EF883A;
+}
+.site_header .site_nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.site_header .site_nav .site_header_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+  gap: 10%;
+  margin-bottom: 0px;
+}
+.site_header .site_nav .site_header_menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.site_header .site_nav.vertical {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 140px;
+  height: 28%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #EF883A;
+  z-index: 1000;
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3019607843);
+  padding: 5px 0px 10px 0px;
+  /* Ombre */
+}
+.site_header .site_nav.vertical .site_header_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  list-style-type: none;
+  gap: 2%;
+}
+.site_header .site_nav.vertical .site_header_menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+.site_header .banner {
+  width: 100%;
+  height: 600px;
+  background-image: url("assets/images/bureau.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+#logoContainer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 14%;
+}
+#logoContainer .partieLogo {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  left: 50%;
+  top: 35%;
+  transform-origin: center;
+  transform: translate(-50%, -55%) scale(0);
+  opacity: 0;
+}
+#logoContainer .partieLogo#logo-cadre {
+  width: 60%;
+  height: 60%;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: cadreApparition 3s forwards;
+}
+#logoContainer .partieLogo#logo-q {
+  animation: agrandirEtAjuster 3s 3s forwards;
+}
+#logoContainer .partieLogo#logo-s {
+  animation: agrandirEtAjuster 3s 2s forwards;
+}
+#logoContainer .nomLogo {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  left: 51%;
+  top: 75%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: cadreApparition 5s 3s forwards;
+}
+#logoContainer .nomLogo img {
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes cadreApparition {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes agrandirEtAjuster {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -60%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+section {
+  height: 500px;
+  background-color: #fff;
+}
+
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 70px 100px 0;
+  background-color: rgba(97, 140, 232, 0.4705882353);
+}
+
+.text-presentation {
+  flex-basis: 40%;
+  padding: 20px 0 0 50px;
+}
+
+.img-presentation {
+  flex-basis: 50%;
+  height: 400px;
+  background-image: url("assets/images/banniere.webp");
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-presentation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 20px solid white; /* Crée un cadre semblable à un trou */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+}
+h1 .letter {
+  display: inline-block;
+  opacity: 0;
+}
+h1 .block-space {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

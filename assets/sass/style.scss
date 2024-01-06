@@ -4,6 +4,14 @@ Author: Stephanie Quibel
 Description: Theme pour mon site professionnel
 Version: 1.0
 */
-body{
-    width: 100%;
-}
+
+@import 'main'; 
+
+@import 'header';
+
+@import 'logo';
+
+@import 'sections';
+
+@import 'titre-principal';
+
